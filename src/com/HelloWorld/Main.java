@@ -4,7 +4,6 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println(isValid("(]{}"));
-        System.out.println(isValid("()[]{}"));
         System.out.println(isValid("({})"));
         Car str = new Car(10, "Volvo");
         System.out.println(str.renderStatement());
