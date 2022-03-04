@@ -1,16 +1,14 @@
 package com.HelloWorld;
 
+import java.util.Scanner;  // Import the Scanner class
+import java.time.LocalDate; // import the LocalDate class
+
 public class Main {
 
     public static void main(String[] args) {
+        LocalDate myObj = LocalDate.now(); // Create a date object
+        System.out.println(myObj); // Display the current date
 
-        System.out.println(isValid("(]{}"));
-        System.out.println(isValid("({})"));
-        Car str = new Car(10, "Volvo");
-        System.out.println(str.renderStatement());
-        Person person = new Person();
-        person.setName("Nam");
-        System.out.println(person.getName());
     }
 
     static boolean isValid(String s) {
@@ -25,5 +23,18 @@ public class Main {
         }
 
         return true;
+    }
+
+    static int finalValueAfterOperations(String[] operations) {
+        int sum = 0;
+        for (String operation : operations) {
+            if (operation.equals("++X") || operation.equals("X++")) {
+                sum++;
+            } else {
+                sum--;
+            }
+        }
+
+        return sum;
     }
 }
